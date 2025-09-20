@@ -1,0 +1,19 @@
+{
+  "listen_address": "0.0.0.0:1000",
+  "target_address": "8.8.8.8:1000",
+  "log_file": "connections.log",
+  "max_conns": 200,
+  "idle_timeout": "120m",
+  "allowlist_enabled": false,
+  "allowlist_cidr": [],
+  "discord_webhook": {
+    "enabled": false,
+    "url": "",
+    "username": "Aura Proxy",
+    "avatar_url": ""
+  },
+  "geoip": {
+    "enabled": true,
+    "url": "http://ip-api.com/json/{ip}"
+  }
+}
