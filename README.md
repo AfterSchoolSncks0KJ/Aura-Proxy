@@ -19,7 +19,7 @@ cd proxy
 
 leave the listen_address in line 2 to 0.0.0.0 for the default address of your proxy server, and change the number behind the : it will be the port to connect! 
 
-change line 3 the target_address with your backend ip/port for example ->  8.8.8.8:22
+change line 3 the target_address with your backend ip:port for example ->  8.8.8.8:22
 
 chmod 777 aura-proxy
 
