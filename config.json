@@ -1,19 +1,66 @@
 {
-  "listen_address": "0.0.0.0:1000",
-  "target_address": "8.8.8.8:1000",
-  "log_file": "connections.log",
-  "max_conns": 200,
-  "idle_timeout": "120m",
-  "allowlist_enabled": false,
-  "allowlist_cidr": [],
-  "discord_webhook": {
-    "enabled": false,
-    "url": "",
-    "username": "Aura Proxy",
-    "avatar_url": ""
+  "settings": {
+    "log_file_path": "./proxy.log",
+    "seconds_between_each_check": 300
   },
-  "geoip": {
+
+  "global_firewall": {
     "enabled": true,
-    "url": "http://ip-api.com/json/{ip}"
-  }
+    "options": {
+      "blacklisting": {
+        "blacklist_ip": {
+          "enabled": false,
+          "block_list": []
+        },
+        "blacklisted_ranges": {
+          "enabled": false,
+          "block_list": []
+        }
+      },
+      "whitelisting": {
+        "whitelist_ip": {
+          "enabled": false,
+          "allow_list": []
+        },
+        "whitelist_range": {
+          "enabled": false,
+          "allow_list": []
+        }
+      }
+    }
+  },
+
+  "discord_settings": {
+    "enabled": true,
+    "username": "AURA Proxy",
+    "avatar_url": "https://example.com/avatar.png"
+  },
+
+  "proxied_hosts": [
+    {
+      "proxy_enabled": false,
+      "proxy_port": 100,
+      "backend_ip": "127.0.0.1",
+      "backend_port": 2222,
+      "discord_webhook_url": "",
+      "expiry": {
+        "does_expire": false,
+        "expiry_date": "9999-01-20",
+        "optional_note": "yyyy-mm-dd"
+      }
+    },
+  
+    {
+      "proxy_enabled": false,
+      "proxy_port": 1337,
+      "backend_ip": "8.8.8.8",
+      "backend_port": 1000,
+      "discord_webhook_url": "",
+      "expiry": {
+        "does_expire": true,
+        "expiry_date": "2026-02-30",
+        "optional_note": "yyyy-mm-dd"
+      }
+    }
+  ]
 }
