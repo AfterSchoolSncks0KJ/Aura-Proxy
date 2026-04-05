@@ -23,7 +23,7 @@ change line 3 the target_address with your backend ip:port for example ->  8.8.8
 
 chmod 777 aura-proxy
 
-sudo screen ./aura-proxy
+sudo screen ./aura
 
 
 line 9-13 is for ur discord webhook to get notifyed when someone connects
